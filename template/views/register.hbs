@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUSAKHA</title>
+
+    {{>links}}
+
+    <style>
+       .logo img{
+    width: 55px;
+    border-radius: 50%;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-sm bg-primary fixed-top">
+      <div class="container">
+        <div class="logo">
+          <img src="./logo.png" alt="">
+        </div>
+          <a href="index.html" class="navbar-brand text-white">EDUSAKHA</a>
+      </div>
+    </nav>
+    
+    <div class="container mt-5 mb-5">
+      <div class="container p-5">
+        <div class="mb-2">
+          <h3 class="text-center">Sign Up</h3>
+          <p><span>*Note :</span> <span class="text-danger">Fill this Form for service</span></p>
+        </div>
+        <form class="mt-3 shadow p-4"  method="post" >
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control mt-2"
+              placeholder="Enter Name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Number"
+              name="phone"
+              required
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="confirmPassword"
+              class="form-control"
+              placeholder="Confirm Password"
+              name="cPassword"
+              required
+            />
+          </div>
+          <div class="form-group text-primary">
+            <label for="Choose Gender">Gender : </label>
+            <label for="id1">
+              <input type="radio" name="gender" value="Male" id="id1" />
+              <span> Male</span>
+            </label>
+            <label for="id2">
+              <input type="radio" name="gender" value="Female" id="id2" />
+              <span> Female</span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary" type="submit">signUp</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container register mb-3 text-center" style="position: relative;top:-55px">
+        <a href="index.html">
+            <button class="btn btn-warning">&larr;Go Back</button>
+        </a>
+    </div>
+
+    {{>footer}}
+    
+</body>
+</html>

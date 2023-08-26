@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Event</title>
+    <link rel="shortcut icon" href="EduSakha_Logo.png" type="image/x-icon" />
+    {{>links}}
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+          <div class="logo">
+            <img src="EduSakha_Logo.png" alt="">
+          </div>
+          <a href="#" class="navbar-brand text-white">Edusakha</a>
+        </div>
+      </nav>
+      
+    <div class="addEvent container" style="margin-top: 100px;">
+      <form action="">
+        <h2 class="text-center">Add an Event</h2>
+
+        <div class="form-group">
+          <label for="eventTitle">Event Title: </label>
+          <input
+            type="text"
+            placeholder="Enter Event Title Here"
+            name="eventTitle"
+            id="eventTitle"
+            class="form-control input"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="eventDescp">Event Description: </label>
+          <textarea
+            name="eventDescp"
+            id="eventDescp"
+            cols="30"
+            rows="10"
+            placeholder="Enter Event Description Here"
+            class="form-control input"
+            style="resize: none"
+            required
+          ></textarea
+          ><br />
+        </div>
+
+        <div class="form-group">
+          <label for="eventStartDate">Event Starting Date: </label>
+          <input
+            type="date"
+            name="eventStartDate"
+            id="eventStartDate"
+            class="form-control input"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="eventEndDate">Event Ending Date: </label>
+          <input
+            type="date"
+            name="eventEndDate"
+            id="eventEndDate"
+            class="form-control input"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="eventEndDate">Event Ending Date: </label>
+          <input
+            type="date"
+            name="eventEndDate"
+            id="eventEndDate"
+            class="form-control input"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="eventEndingTime">Event Ending Time:</label>
+          <input
+            type="time"
+            name="eventEndingTime"
+            id="eventEndingTime"
+            class="form-control input"
+            required
+          /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="registrationStartDate"
+            >Registration Starting Date:
+          </label>
+          <input
+            type="date"
+            name="registrationStartDate"
+            id="registrationStartDate"
+            class="form-control input"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="registrationEndDate">Registration End Date:</label>
+          <input
+            type="date"
+            name="registrationEndDate"
+            id="registrationEndDate"
+            class="form-control input"
+            required
+          /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="eventVenue">Event Venue:</label>
+          <input
+            type="text"
+            name="eventVenue"
+            id="eventVenue"
+            class="form-control input"
+            placeholder="Enter Venue"
+            required
+          /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="eventPoster">Event Poster:</label>
+          <input
+            type="file"
+            name="eventPoster"
+            id="eventPoster"
+            height="35px"
+            width="40px"
+            class="form-control input"
+            required
+          /><br />
+        </div>
+
+        <div class="form-group">
+          <label for="eventOrgaName">Event Organization Name:</label>
+          <input
+            type="text"
+            name="eventOrgaName"
+            id="eventOrgaName"
+            class="form-control input"
+            placeholder="Enter Organization Name"
+            required
+          /><br />
+        </div>
+
+       
+        <div class="form-group">
+            <div class="addEventbtn">
+                <button id="createeventbtn" class="btn btn-primary" style="width: 160px;" type="submit">Create Event</button>
+                <a href="General.html">
+                    <button id="gobackbtn" class="btn btn-warning" style="width: 160px;">&larr; Go Back</button>
+                </a>
+            </div>
+      </form>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const eventForm = document.getElementById("eventForm");
+    
+        eventForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            const requiredFields = eventForm.querySelectorAll("[required]");
+    
+            let allFieldsFilled = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    allFieldsFilled = false;
+                }
+            });
+    
+            if (!allFieldsFilled) {
+                alert("Please fill in all required fields.");
+            } else {
+                alert("Event created successfully!");
+                // You can submit the form to your backend here
+            }
+        });
+    });
+
+    const gobackbtn = document.getElementById("gobackbtn");
+
+    gobackbtn.addEventListener('click',() => {
+        location.href='index.html'
+    })
+    
+</script>
+  </body>
+</html>

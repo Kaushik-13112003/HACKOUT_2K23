@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="shortcut icon" href="EduSakha_Logo.png" type="image/x-icon">
+  {{!-- <link rel="stylesheet" href="index.css" /> --}}
+  {{!-- <link rel="stylesheet" href="/public/css/about.css" /> --}}
+  <style>
+    body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.ab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.ab .first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 7px 27px;
+    border-radius: 40px;
+    margin-top: 20px;
+    transition: all 0.5s ease-in-out ;
+    flex-wrap: wrap;
+}
+.ab .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ab .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ab .links .linksData{
+    margin: 2.3px;
+    position: relative;
+    top: -10px;
+}
+.ab .im img{
+    width: 100px;
+    border-radius: 20px;
+    position: relative;
+    top: -40px;
+    border: 1px solid black;
+    height: 100px;
+}
+
+.ab .links img{
+    width: 29px;
+}
+.ab .top{
+    margin-top: -20px;
+}
+.ab .first:hover{
+    background-color: antiquewhite;
+}
+.logo img{
+    width: 55px;
+    border-radius: 50%;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+  </style>
+  {{>links}}
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-primary fixed-top">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="" />
+      </div>
+          <a href="index.html" class="navbar-brand text-white">EDUSAKHA</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5 p-3 text-center">
+    <h3 class="mt-5">About Us</h3>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-3 col-lg-3">
+        <div class="ab">
+          <div class="first">
+            <div class="im">
+              <img src="Kaushik Prajapati.jpg" alt="Kaushik Prajapati">
+            </div>
+            <div class="top">
+              <p>Kaushik Prajapati</p>
+            </div>
+            <div class="contact">
+
+              <div class="links">
+                <div class="linksData">
+                  <a href="https://www.linkedin.com/in/kaushik-prajapati-0a258b27a">
+                    <img src="LinkedIn.png" alt="LinkedIn_Kaushik Prajapati">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3 col-lg-3">
+        <div class="ab">
+          <div class="first">
+            <div class="im">
+              <img src='Yash-Kathesia-_1_.jpg' alt="Yash Kathesia">
+            </div>
+            <div class="top">
+              <p>Yash Kathesia</p>
+            </div>
+            <div class="contact">
+
+              <div class="links">
+                <div class="linksData">
+                  <a href="https://www.linkedin.com/in/yash-kathesia-5245601a9">
+                    <img src="LinkedIn.png" alt="LinkedIn_Yash Kathesia">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3 col-lg-3">
+        <div class="ab">
+          <div class="first">
+            <div class="im">
+              <img src="Rishit Gondaliya.jpeg" alt="">
+            </div>
+            <div class="top">
+              <p>Rishit Gondaliya</p>
+            </div>
+            <div class="contact">
+
+              <div class="links">
+                <div class="linksData">
+                  <a href="https://www.linkedin.com/in/rishit-gondaliya-1b0b20250">
+                    <img src="LinkedIn.png" alt="LinkedIn_Rishit Gondaliya">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-3 col-lg-3">
+        <div class="ab">
+          <div class="first">
+            <div class="im">
+              <img src="Jitendra Varma.jpg" alt="Jitendra Varma">
+            </div>
+            <div class="top">
+              <p>Jitendra Varma</p>
+            </div>
+            <div class="contact">
+
+              <div class="links">
+                <div class="linksData">
+                  <a href="https://www.linkedin.com/in/jitendra-varma-968091260">
+                    <img src="LinkedIn.png" alt="LinkedIn_Jitendra Varma">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-3">
+    <h3>Purpose</h3>
+    <p>The platform's engagement skills are improved by the Edusakha Events Feature, which enables colleges to engage
+      with potential students through engaging online events.</p>
+    <p>This function supports Edusakha's goal of building deep connections between colleges and students.</p>
+    <p>Colleges organize different events like: sports and cultural events, social
+      events for students every year. While organizing these events they face many
+      issues like: Making individual what's app groups for individual event,
+      promotion of events, attracting students...etc.</p>
+  </div>
+
+  <div class="container mt-5 mb-4">
+    <h3>Services</h3>
+    <ul>
+      <li>Platform to Manage Events</li>
+      <li>Helps in Virtual Event Organization & Hackathons</li>
+      <li>Live Video Streaming for Webinars</li>
+      <li>Provide User-Friendly System</li>
+    </ul>
+  </div>
+
+
+  <div class="container register mt-3 text-center" style="margin-bottom: 70px;">
+    <a href="index.html">
+      <button class="btn btn-warning">&larr;Go Back</button>
+    </a>
+  </div>
+
+    {{!-- Footer Section --}}
+  <footer class="text-center bg-primary text-white fixed-bottom" id="footer">
+    <p style="position: relative;top: 10px;">2023 &copy; Edusakha</p>
+  </footer>
+
+</body>
+
+</html>

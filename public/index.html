@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDUSAKHA</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  />
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="./css/index.css">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-primary top">
+      <div class="container">
+        <div class="logo">
+          <img src="./logo.png" alt="">
+        </div>
+        <a href="#" class="navbar-brand text-white">EDUSAKHA</a>
+      </div>
+    </nav>
+
+    <!-- Carousel Animation -->
+  <div class=" imgCarousel">
+    <div class="carousel slide" id="slider" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="./Cultural.jpeg" alt="Cultural Image">
+          <div class="carousel-caption">
+            <h2 class="text-dark">Cultural Events</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <img src="./Sport Event_Image.jpg" alt="Sport Event_Image">
+          <div class="carousel-caption">
+            <h2 class="">Sports Events</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <img src="./webinar.jpg" alt="Webinar_Image">
+          <div class="carousel-caption">
+            <h2 class="">Webinar</h2>
+          </div>
+        </div>
+
+        <div class="carousel-item ">
+          <img src="./HackaThon.jpg" alt="Hackathon_Image">
+          <div class="carousel-caption">
+            <h2 class="">Hackathons</h2>
+          </div>
+        </div>
+
+        <ul class="carousel-indicators">
+          <li data-target="#slider" data-slide-to="0" class="active"></li>
+          <li data-target="#slider" data-slide-to="1"></li>
+          <li data-target="#slider" data-slide-to="2"></li>
+          <li data-target="#slider" data-slide-to="3"></li>
+        </ul>
+
+        <!-- left & right -->
+        <a href="#slider" data-slide="prev" class="carousel-control-prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#slider" data-slide="next" class="carousel-control-next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Buttons -->
+  <div class="register" id="registerButtons">
+    <div>
+      <a href="/login">
+        <button class="btn btn-primary">Login</button>
+      </a>
+    </div>
+    <div>
+      <a href="/about">
+        <button class="btn btn-primary">About Us</button>
+      </a>
+    </div>
+    <div>
+      <a href="/register">
+        <button class="btn btn-primary">Join Us</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="text-center bg-primary text-white fixed-bottom" id="footer">
+    <p style="position: relative;top: 10px;">2023 &copy; Edusakha</p>
+  </footer>
+
+    
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES - SPORTS EVENTS</title>
+    {{>links}}
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="General.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+</head>
+
+    <style>
+        body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* gap: 10px !important; */
+}
+.mainEvents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 18px;
+}
+.add{
+   display: flex;
+   margin-top: 100px;
+   justify-content: center;
+}
+.up {
+  padding: 25px;
+  width: 100vw !important;
+}
+.on {
+  padding: 25px;
+  margin-top: 18px;
+}
+.cmp{
+    padding: 25px;
+    margin-top: 10px;
+}
+.card {
+  width: 200px;
+  transition: all 10s;
+}
+.card.a:hover {
+  transform: rotateY(30deg);
+  background-color: aqua;
+}
+.titleAdd {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card img{
+  height: 130px;
+}
+    </style>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-primary fixed-top navbar-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand text-white">Event Managemet System</a>
+
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarid"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarid">
+        <ul class="navbar-nav text-center ml-auto">
+           <li class="nav-item">
+            <a class="nav-link text-warning" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="general">General</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="social">Social</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="sport">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="cultural">Cultural</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="add mb-3">
+    <a href="addEvent">
+      <button class="btn btn-warning text-white">Add Event <i class="fa-regular fa-plus"></i></button>
+    </a>
+  </div>
+
+    <div class="container up shadow ">
+        <div class="container titleAdd">
+          <div>
+            <h3 class="text-center">UpComing Events &darr;</h3>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-3 col-lg-3 col-md-6 mainEvents">
+                <div class="events">
+                  <div class="card">
+                    <img src="./Impulse_Image.jpg" class="card-img" alt="..." />
+                    <div class="card-body">
+                      <h5 class="card-title">Impulse Events</h5>
+                      <p class="card-text mt-3">Date : 3/5/2024</p>
+                      <a href="#" class="btn btn-primary">Let's Praticipate</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+
+        <!-- ongoingEvent -->
+    <div class="container on shadow mt-4">
+        <div class="container">
+          <div>
+            <h3 class="text-center">OnGoing Events &darr;</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-3 col-lg-3 col-md-6 mainEvents">
+            <div class="events">
+              <div class="card">
+                <img src="./Lakshya Image.jpg" class="card-img" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Lakshya 2k23</h5>
+                  <p class="card-text mt-3">Date : 28/6/2023</p>
+                  <a href="#" class="btn btn-primary">Let's Visit</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- completed -->
+    <div class="container shadow cmp mt-4" style="margin-bottom: 70px;">
+        <div class="container titleAdd">
+          <div>
+            <h3 class="text-center">Completed Events &rarr;</h3>
+          </div>
+        </div>
+        <div class="row">
+            * <h3 style="color: red;">There is No Completed Events.</h3>
+        </div>
+      </div>
+  
+      
+     {{>footer}}
+  
+</body>
+</html>

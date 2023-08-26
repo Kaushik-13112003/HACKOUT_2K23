@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDUSAKHA - LOGIN</title>
+    {{!-- <link rel="stylesheet" href="/public/css/index.css"> --}}
+    {{>links}}
+    <style>
+      .logo img{
+    width: 55px;
+    border-radius: 50%;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+    </style>
+</head>
+<body>
+     <nav class="navbar navbar-expand-sm bg-primary">
+        <div class="container">
+            <div class="logo">
+                <img src="./logo.png" alt="Img">
+              </div>
+          <a href="index.html" class="navbar-brand text-white">EDUSAKHA</a>
+        </div>
+      </nav>
+
+    <div class="container mt-5">
+      <h3></h3>
+
+      <div class="container p-3">
+        <div class="mb-2">
+          <h3 class="text-center">Login</h3>
+        </div>
+        <form class="mt-3 shadow p-4" method="post" >
+          
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+          </div>
+         
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Password"
+              name="password"
+              required
+            />
+          </div>
+
+          <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container register text-center">
+        <a href="index.html">
+            <button class="btn btn-warning">&larr;Go Back</button>
+        </a>
+    </div>
+
+    {{>footer}}
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Live Streaming</title>
+    <style>
+        /* Your existing CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .section {
+            background-color: #fff;
+            height: 300px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .live-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .live-button:hover {
+            background-color: #c0392b;
+        }
+
+        .stream-status {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        form a {
+            text-decoration: none;
+        }
+
+        form a button {
+            margin-top: 30px;
+        }
+
+        .user-section {
+            background-color: #fff;
+            height: 300px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            display: none;
+            /* Hide by default */
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background-color: #fff;
+            height: 300px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .section {
+            background-color: #fff;
+            height: 300px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .toggle {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .togglefeature {
+            text-align: center;
+            width: 200px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .togglebtn {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .header-button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header-button.active {
+            background-color: #c0392b;
+        }
+
+
+        .section {
+            position: relative;
+            /* Required for positioning the toggle link */
+        }
+
+        .toggle-link {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+            z-index: 1;
+            /* Ensure link is above other content */
+        }
+
+        /* Additional styling to improve visibility */
+        .toggle-link:hover {
+            color: #1a73e8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toggle">
+        <div class="togglefeature">
+            <p>Who are you?</p>
+            <div class="togglebtn">
+                <button class="header-button" id="userButton" onclick="showForm('user')">User</button>
+                <button class="header-button" id="adminButton" onclick="showForm('admin')">Administrator</button>
+            </div>
+        </div>
+
+        
+
+        <div class="section" id="userSection">
+            <div class="section" id="userSection">
+                <!-- User form content -->
+            </div>
+            <h2>User Login</h2>
+            <form action="livescreen">
+                <div class="input-group">
+                    <label for="userId">User ID:</label>
+                    <input type="text" id="userId" placeholder="Enter User ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="userPassword">Password:</label>
+                    <input type="password" id="userPassword" placeholder="Enter Password" required>
+                </div>
+                <button class="live-button" onclick="startUser()">Watch</button>
+            </form>
+            <a href="" class="toggle-link" onclick="toggleForm('user')">Switch to Admin</a>
+        </div>
+
+
+
+        <div class="section" id="adminSection">
+            <h2>Admin Login</h2>
+            <form action="https://castr.com/app/dashboard?1=1">
+                <div class="input-group">
+                    <label for="adminId">Admin ID:</label>
+                    <input type="text" id="adminId" placeholder="Enter Admin ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" placeholder="Enter Password" required>
+                </div>
+                <button class="live-button" onclick="startAdmin()">Go Live</button>
+            </form>
+            <a href="" class="toggle-link" onclick="toggleForm('admin')">Switch to User</a>
+        </div>
+
+    </div>
+    
+
+    <script>
+        function showForm(type) {
+            var userSection = document.getElementById('userSection');
+            var adminSection = document.getElementById('adminSection');
+            var userButton = document.getElementById('userButton');
+            var adminButton = document.getElementById('adminButton');
+
+            if (type === 'user') {
+                userSection.classList.add('active');
+                adminSection.classList.remove('active');
+                userButton.classList.add('active');
+                adminButton.classList.remove('active');
+            } else if (type === 'admin') {
+                userSection.classList.remove('active');
+                adminSection.classList.add('active');
+                userButton.classList.remove('active');
+                adminButton.classList.add('active');
+            }
+        }
+
+        function startAdmin() {
+            var adminId = document.getElementById('adminId').value;
+            var adminPassword = document.getElementById('adminPassword').value;
+
+            if (adminId && adminPassword) {
+                alert('Now you can go live as an admin.');
+            } else {
+                alert('Please enter both the admin ID and password.');
+            }
+        }
+
+        function startUser() {
+            var userId = document.getElementById('userId').value;
+            var userPassword = document.getElementById('userPassword').value;
+
+            if (userId && userPassword) {
+                alert('You are registered for the webinar.');
+            } else {
+                alert('Please enter both the user ID and password.');
+            }
+        }
+        function showForm(type) {
+            var userSection = document.getElementById('userSection');
+            var adminSection = document.getElementById('adminSection');
+            var userButton = document.getElementById('userButton');
+            var adminButton = document.getElementById('adminButton');
+            var toggleFeature = document.querySelector('.togglefeature'); // Get the togglefeature div
+
+            if (type === 'user') {
+                userSection.classList.add('active');
+                adminSection.classList.remove('active');
+                userButton.classList.add('active');
+                adminButton.classList.remove('active');
+            } else if (type === 'admin') {
+                userSection.classList.remove('active');
+                adminSection.classList.add('active');
+                userButton.classList.remove('active');
+                adminButton.classList.add('active');
+            }
+
+            toggleFeature.style.display = 'none'; // Hide the togglefeature div
+        }
+        function toggleForm(type) {
+            var userSection = document.getElementById('userSection');
+            var adminSection = document.getElementById('adminSection');
+            var userToggleLink = document.querySelector('#userSection .toggle-link');
+            var adminToggleLink = document.querySelector('#adminSection .toggle-link');
+            var toggleFeature = document.querySelector('.togglefeature');
+
+            if (type === 'user') {
+                userSection.classList.add('active');
+                adminSection.classList.remove('active');
+                userToggleLink.textContent = 'Switch to Admin';
+                adminToggleLink.textContent = 'Switch to User';
+            } else if (type === 'admin') {
+                userSection.classList.remove('active');
+                adminSection.classList.add('active');
+                userToggleLink.textContent = 'Switch to User';
+                adminToggleLink.textContent = 'Switch to Admin';
+            }
+
+            toggleFeature.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

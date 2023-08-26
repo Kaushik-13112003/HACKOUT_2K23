@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Live-Stream</title>
+    {{>links}}
+    <style>
+/* Reset some default styling */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.video-container {
+    flex: 1;
+    border: 5px solid #ccc;
+    background-color: black;
+    border-radius: 5px;
+}
+
+
+.chat-container {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: scroll;
+    border-radius: 3px;
+    border: 1.3px solid #ccc;
+    padding: 10px;
+}
+
+#chat-input {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 30x;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+#chat-input:hover {
+    border-color: #f74040;
+}
+
+#send-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+header {
+    position: relative; 
+}
+
+#exit-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#exit-button:hover {
+    background-color: #eb0404;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Live Stream</title>
+</head>
+<body>
+    <header>
+        <h1>Live Stream Title</h1>
+        <button id="exit-button">Exit</button>
+    </header>
+    <main>
+        <div class="video-container">
+            <div class="live-icon">
+                <iframe src="https://player.castr.com/live_30fbaac0440c11eea29b7106c72125aa" width="100%" style="aspect-ratio: 16/9; min-height: 340px;" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen  webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            </div>
+            
+        </div>
+        <div class="chat-container">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </main>
+   
+</body>
+</html>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const chatInput = document.getElementById("chat-input");
+    const sendButton = document.getElementById("send-button");
+    const chatMessages = document.getElementById("chat-messages");
+
+    sendButton.addEventListener("click", function() {
+        const message = chatInput.value;
+        if (message.trim() !== "") {
+            const messageElement = document.createElement("div");
+            messageElement.classList.add("message");
+            messageElement.textContent = message;
+            chatMessages.appendChild(messageElement);
+            chatInput.value = "";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
